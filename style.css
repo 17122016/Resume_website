@@ -24,7 +24,7 @@ h3 {
 
 main {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 1fr;
     margin-top: 3em;
 }
 
@@ -60,5 +60,15 @@ h3 {
 
 
 #mainLeft {
-    border-right: 1px solid lightgray;
+    border-right: none;
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 40% 60%;
+    }
+
+    #mainLeft {
+        border-right: 1px solid lightgray;
+    }
 }
